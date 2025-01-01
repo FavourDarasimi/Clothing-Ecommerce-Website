@@ -1,0 +1,34 @@
+.div{
+    text-align: center;
+}
+
+
+.images{
+    width: 500px;
+    height: 500px;
+}
+
+.section{
+    box-shadow: hsl(0,0%,80%) 0 0 16px;
+    border-radius: 15px; 
+    padding: 5px;
+}
+
+.name{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkred;
+}
+
+.details{
+    box-shadow: hsl(0,0%,80%) 0 0 16px;
+    border-radius: 15px; 
+    padding: 15px;
+}
+.comments{
+    box-shadow: hsl(0,0%,80%) 0 0 16px;
+    border-radius: 15px; 
+}
+
+.comment{
+    font-size: 20px;
+}

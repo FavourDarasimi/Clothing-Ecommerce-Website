@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+
+    {% load static %}    
+    
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" >
+    {% endblock title %}
+
+</head>
+<body>
+    {% load static %}
+    
+    {% block content %}
+    <h1 class="head" >Login</h1>
+    <form id="form" method="post" class="shadow p-4 mb-5 bg-body rounded"  >
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="text" class="form-control" name="username" placeholder="Username">
+
+        </div>
+        
+        <div class="mb-3">
+            <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        
+        <div >
+            <button id="button-div" type="submit" class="btn btn-primary">Submit</button>
+            <p >or</p>
+            <a id="button-div" class="btn btn-outline-secondary" href="{% url 'signup' %}">Register</a>
+        </div>
+    </form>
+    
+    {% endblock %}
+</body>
+</html>

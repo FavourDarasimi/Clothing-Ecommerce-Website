@@ -1,0 +1,68 @@
+.background{
+    background-image:url('/static/images/khaled-ghareeb-QN507MdnxRQ-unsplash.jpg') ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 97% 94%;
+    height: 500px;
+}
+
+.text1{
+    text-align: left;
+    font-size: 70px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.text2{
+    text-align: right ;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.new{
+    text-align: center;
+    font-size: 68px;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkred;
+}
+
+.div{
+    background: #fff;
+    display:flex;
+}
+.div2{
+    display:inline-block;
+}
+
+.images{
+    background: #fff;
+    width: 250px;
+    background-repeat: no-repeat;
+    height: 250px;
+    background-size: cover; 
+    border: 1px solid #ddd;
+}     
+
+.name{
+    text-align: center;
+}
+
+ .product{ 
+    
+    float: left;
+    width: 25%;
+    margin-right: 65px;
+    box-shadow: hsl(0,0%,80%) 0 0 16px;
+    display: block;
+    /* border:1px solid; */
+    border-radius: 15px; 
+    /* border-width: thin; */
+    width: 260px; 
+    height: 400px;
+    padding: 5px;
+    color: black;
+
+}

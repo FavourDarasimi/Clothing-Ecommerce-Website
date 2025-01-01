@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/homes.css' %}">
+    {% endblock title %}
+</head>
+<body>
+    {% block content %}
+    <div  ><h1 class="new" > Categories </h1> </div>
+        
+        
+    {% for categories in category %}
+    
+    
+    <div class="product">
+        <div class="div"><img  src="{{categories.image.url}}" alt="image"  class="images"></div>
+        <h3>{{categories.name}}</h3>
+        <hr>
+        <a class="btn btn-outline-secondary" href="{% url 'products' categories.pk %}">
+            View
+        </a>
+    </div>
+    
+    <br/>
+
+    {% endfor %}
+
+    {% endblock %}
+</body>
+</html>

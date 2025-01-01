@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/homes.css' %}">
+    {% endblock title %}
+
+</head>
+<body>
+    {% block content %}
+    
+        <div  ><h1 class="new" > {{ category.name }} </h1> </div>
+        {% for items in product %}
+        <div class="product">
+            <div class="div"><img  src="{{items.image.url}}" alt="image"  class="images"></div>
+            <h3>{{items.name}}</h3>
+            <hr>
+            <div class="div2" >
+            <a class="btn btn-outline-secondary" href="{% url 'product_detail' items.pk %}">
+                View
+            </a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'add_to_cart' items.pk %}"><button class="btn btn-outline-secondary ">Add Cart</button></a>
+            {% endif %}
+
+            <div > <h3  class="name">${{ items.price }} </h3> </div>
+            </div>
+        </div>
+        <br/>
+        {% endfor %}
+    {% endblock %}    
+
+</body>
+</html>

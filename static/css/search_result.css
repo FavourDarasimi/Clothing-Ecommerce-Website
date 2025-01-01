@@ -1,0 +1,50 @@
+.div{
+    
+    background: #fff;
+    display:flex;
+    
+    
+}
+
+.header{
+    text-align: center;
+    font-size: 68px;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkred;
+}
+
+.images{
+    background: #fff;
+    
+    width: 250px;
+    background-repeat: no-repeat;
+    height: 250px;
+    background-size: cover;
+    box-shadow: hsl(0,0%,80%) 0 0 16px;
+
+}    
+
+.name{
+    text-align: center;
+}
+
+
+
+ .product{ 
+    
+    
+    margin-right: 65px;
+    display: block;
+    box-shadow: hsl(0,0%,80%) 0 0 16px;
+    border-radius: 15px; 
+    /* border-width: thin; */
+    width: 260px; 
+    height: 400px;
+    padding: 5px;
+    color: black;
+    /* box-sizing: border-box; */
+    /* margin-right: 1040px; */
+    
+
+}

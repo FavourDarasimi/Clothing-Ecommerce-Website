@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     CSS only 
+    {% block title %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
+    {% endblock title %}
+
+</head>
+<body>
+    
+    {% block content %}
+        <br>
+        <div>
+            <div class="div"><img  src="{{Detail.image.url}}" alt="image"  class="images"></div>
+            <br>
+            <div class="section">
+            <div > <h2 class="name">{{ Detail.name }}</h2> </div>
+            <div> <h4 class="price">${{ Detail.price }}</h4></div>
+            <div class="details">
+                <h2 class="title">Details</h2>
+                <div class="detail">
+                    <h5>{{ Detail.details }}</h5>
+                </div>
+            </div>
+            </div>    
+        </div>    
+        <br/>
+        <div class="like">
+            
+        </div>
+
+        <div class="section">
+            {% if not Detail.comments.all %}
+                <h3>No Comments Yet.....</h3>
+                {% if user.is_authenticated %}
+                <a class="btn btn-outline-secondary" href="{% url 'add_comment' Detail.pk %}">Add Comment</a>
+                {% endif %}
+            {% else %}
+                <h3>COMMENTS</h3>
+                <br>
+                {% if user.is_authenticated %}
+                <div>
+                    <a class="btn btn-outline-secondary" href="{% url 'add_comment' Detail.pk %}">Add Comment</a>
+                </div>
+                {% endif %}
+                <br>
+                {% for comment in Detail.comments.all %}
+                <h5>{{comment.author}} - {{ comment.date_added }}</h5>
+                <p>{{ comment.comment }}</p>
+                <hr>
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% endblock %}
+</body>
+</html>
+
+
